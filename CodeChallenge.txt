@@ -1,0 +1,35 @@
+﻿The STL file format is a widely used common file format to represent 3D objects in CAD software and for 3D printing.  From Wikipedia:
+
+
+An STL file describes a raw unstructured triangulated surface by the unit normal and vertices (ordered by the right-hand rule) of the triangles using a three-dimensional Cartesian coordinate system. STL coordinates must be positive numbers, there is no scale information, and the units are arbitrary.
+
+
+An ASCII STL file begins with the line:
+
+
+solid name 
+
+Followed by any number of triangles:
+
+
+facet normal ni nj nk
+   outer loop
+       vertex v1x v1y v1z
+       vertex v2x v2y v2z
+       vertex v3x v3y v3z
+   endloop
+endfacet
+
+
+The vertices of each triangle are defined by the vertex lines.  The facet normal line defines a vector pointing out from the center of the solid object.
+
+
+The file ends with:
+
+
+endsolid name
+
+You will be supplied with a sample STL file that defines a cube with a hole in it.  Write a parser in Javascript, Ruby or PHP that reads the STL into a memory structure you have defined.  Be sure to account for where triangles share vertices.  The output of your program will be the number of vertices and faces that are in the STL file.
+
+
+Do not use any 3rd party libraries in your code and do not use code snippets without understanding what they do.  Make sure your code is well commented, legible, and extensible.  Should you be asked to come in for an interview you will continue development against this program.
