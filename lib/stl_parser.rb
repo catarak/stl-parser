@@ -39,12 +39,4 @@ class StlParser
 
   private
 
-    def process_line(line)
-      words = line.split(" ")
-      if words.first == "solid"
-        self.solid = Solid.new(words[1])
-      elsif words.first == "facet"
-        
-      end
-    end
 end
