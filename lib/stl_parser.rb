@@ -32,7 +32,7 @@ class StlParser
     end
   end
 
-  def results
+  def print_results
     puts "Number of facets: #{self.solid.facets.length}"
     puts "Number of (unique) vertices: #{self.solid.vertices.length}"
   end
