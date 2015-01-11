@@ -1,6 +1,6 @@
 class Facet
   attr_accessor :vertices, :normal
-  def initialize(vertices, normal)
+  def initialize(vertices = [], normal = nil)
     @vertices = vertices
     @normal = normal
     #throw an exception if normal is not a vector

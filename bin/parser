@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require_relative '../config/environment'
+
+parser = StlParser.new("cube.stl")
+parser.parse!
+parser.results
