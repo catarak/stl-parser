@@ -15,15 +15,16 @@ class StlParser
       while line = f.gets
         line = line.strip
         words = line.split(" ")
-        if words.first == "solid"
+        case words.first
+        when "solid"
           self.solid = Solid.new(words[1])
-        elsif words.first == "facet"
+        when "facet"
           normal = Vector.new(words[2], words[3], words[4])
           current_facet = Facet.new([], normal)
-        elsif words.first == "vertex"
+        when "vertex"
           vertex = Vertex.new(words[1], words[2], words[3])
           current_vertices << vertex
-        elsif words.first == "endfacet"
+        when "endfacet"
           current_facet.vertices = current_vertices.dup
           current_vertices = []
           self.solid.add_facet(current_facet.dup)
