@@ -15,7 +15,7 @@ $ git clone git@github.com:catarak/stl-parser.git
 
 Then change into the project directory
 ```bash
-$ cd stl-paster
+$ cd stl-parser
 ```
 And then run it by entering the command
 ```bash
