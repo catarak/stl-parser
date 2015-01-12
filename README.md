@@ -1,10 +1,14 @@
-#Parsing STL files
+#Parsing an STL file
 
-This is my first journey in parsing .stl files. I've made the assumption that the .stl file has no errors. I think this is reasonable since I don't think .stl files are written by humans usually.
+This is my first journey in parsing .stl files. The goal was to parse an .stl file, store it in a data structure, and then output the number of vertices and facets in the solid.
 
-A Solid object has many vertices, facets, and has a name. When a facet is inserted into a solid, its vertices are also inserted as well. If a vertex already has been added to the solid, it will not be added twice. Identical facets will also not be added twice. 
+##Assumptions and Notes
 
-In the code as it is right now, a vertex and vector behave identically, just with a different name. Vectors and vertices have very different properties, conceptually, and therefore I decided to separate them into separate classes.
+* I've made the assumption that the .stl file has no errors. I think this is reasonable since I don't think .stl files are written by humans usually.
+
+* A Solid object has many vertices, facets, and has a name. When a facet is inserted into a solid, its vertices are also inserted as well. If a vertex already has been added to the solid, it will not be added twice. Identical facets will also not be added twice. 
+
+* In the code as it is right now, a vertex and vector behave identically, just with a different name. Vectors and vertices have very different properties, conceptually, and therefore I decided to separate them into separate classes.
 
 ##How To Run
 
